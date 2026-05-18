@@ -1,0 +1,31 @@
+|-----------X-----------|
+|                       |
+|       |-|   |-|       |
+|-A-----| |   | |-----C-|--+
+|-F-|   |_|   |_|   |-H-|  |
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  W
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  |
+|   |   |   |   |   |   |  |
+|   |-| |   |   | |-|   |  |
+|-E-| | |       | | |-G-|--+
+|   |_| |       | |_|   |
+|---B---|       |---D---|
+|                       |
+|-----------X-----------|
+
+Left front toe relative to string, ab = atan((A-B)/W)
+Right front toe relative to string, cd = atan((C-D)/W)
+Left rear toe relative to string, ef = atan((F-E)/W)
+Right rear toe relative to string, gh = atan((H-G)/W)
+Front toe, ftoe = ab + ef
+Rear toe, rtoe = cd + gh
+Chaissis centerline to strings angle, cl = ( atan((A-E)/W) - atan((C-G)/W) ) / 2
+Front axle center relative to left string, cf = (X-A-C)/2+A
+Rear axle center relative to left string, cr = (X-E-G)/2+E
+cl = atan((cf-cr)/W) = atan(X/2-A/2-C/2+A-X/2+E/2+G/2-E) = atan((A-C-E+G)/2/W)
+Thrust angle, thrust = (ef - gh)/2 + cl
