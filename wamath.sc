@@ -13,28 +13,35 @@ format B 12 3 0
 format C 12 3 0
 format D 10 3 0
 leftstring A1 = "A"
-let A1 = 30
+let A1 = 20
 leftstring B1 = "ab"
 let B1 = @atan((A1-A2)/A9)/@pi*180
+leftstring C1 = "ftoel"
+let C1 = B1-B5
 leftstring A2 = "B"
 let A2 = 20
 leftstring B2 = "cd"
 let B2 = @atan((A3-A4)/A9)/@pi*180
+leftstring C2 = "ftoer"
+let C2 = B2+B5
 leftstring A3 = "C"
-let A3 = 30
+let A3 = 40
 leftstring B3 = "ef"
 let B3 = @atan((A6-A5)/A9)/@pi*180
+leftstring C3 = "rtoel"
+let C3 = B3-B5
 leftstring A4 = "D"
 let A4 = 20
 leftstring B4 = "gh"
 let B4 = @atan((A8-A7)/A9)/@pi*180
+leftstring C4 = "rtoer"
+let C4 = B4+B5
 leftstring A5 = "E"
 let A5 = 20
 leftstring B5 = "cl"
 let B5 = (@atan((A1-A5)/A9)-@atan((A3-A7)/A9))/2/@pi*180
-let C5 = @atan((A1-A3-A5+A7)/A9/2)/@pi*180
 leftstring A6 = "F"
-let A6 = 50
+let A6 = 65
 leftstring B6 = "ftoe"
 let B6 = B1+B2
 leftstring A7 = "G"
@@ -42,9 +49,10 @@ let A7 = 20
 leftstring B7 = "rtoe"
 let B7 = B3+B4
 leftstring A8 = "H"
-let A8 = 50
+let A8 = 35
 leftstring B8 = "thrust"
-let B8 = (B3-B4)/2+B5
+let B8 = (B3-B4)/2-B5
+let C8 = (C3-C4)/2
 leftstring A9 = "W"
 let A9 = 2700
-goto B8
+goto A3

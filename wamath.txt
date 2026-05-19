@@ -25,7 +25,12 @@ Right rear toe relative to string, gh = atan((H-G)/W)
 Front toe, ftoe = ab + ef
 Rear toe, rtoe = cd + gh
 Chaissis centerline to strings angle, cl = ( atan((A-E)/W) - atan((C-G)/W) ) / 2
-Front axle center relative to left string, cf = (X-A-C)/2+A
-Rear axle center relative to left string, cr = (X-E-G)/2+E
-cl = atan((cf-cr)/W) = atan(X/2-A/2-C/2+A-X/2+E/2+G/2-E) = atan((A-C-E+G)/2/W)
+Real frot toe left, ftoel = ab - cl
+Real frot toe right, ftoer = cd + cl
+Real rear toe left, rtoel = ef - cl
+Real rear toe right, rtoer = gh + cl
 Thrust angle, thrust = (ef - gh)/2 + cl
+
+# Front axle center relative to left string, cf = (X-A-C)/2+A
+# Rear axle center relative to left string, cr = (X-E-G)/2+E
+# cl = atan((cf-cr)/W) = atan(X/2-A/2-C/2+A-X/2+E/2+G/2-E) = atan((A-C-E+G)/2/W)
