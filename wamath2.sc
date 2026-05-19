@@ -9,64 +9,56 @@ nb_frozen_rows 0
 nb_frozen_cols 0
 nb_frozen_screenrows 0
 nb_frozen_screencols 0
+format A 10 3 0
 format B 12 3 0
-format C 12 3 0
+format C 11 3 0
 format D 10 3 0
 leftstring A1 = "A"
 let A1 = 20
 leftstring B1 = "ab"
 let B1 = @atan((A1-A2)/A9)/@pi*180
-leftstring C1 = "ftoel"
-let C1 = B1-B5
 leftstring A2 = "B"
-let A2 = 20
+let A2 = 10
 leftstring B2 = "cd"
 let B2 = @atan((A3-A4)/A9)/@pi*180
-leftstring C2 = "ftoer"
-let C2 = B2+B5
+leftstring C2 = "setB"
+let C2 = A1-@tan(A11/2*@pi/180)*A9
 leftstring A3 = "C"
-let A3 = 40
+let A3 = 20
 leftstring B3 = "ef"
 let B3 = @atan((A6-A5)/A9)/@pi*180
-leftstring C3 = "rtoel"
-let C3 = B3-B5
 leftstring A4 = "D"
-let A4 = 20
+let A4 = 15
 leftstring B4 = "gh"
 let B4 = @atan((A8-A7)/A9)/@pi*180
-leftstring C4 = "rtoer"
-let C4 = B4+B5
+leftstring C4 = "setD"
+let C4 = A3-@tan(A11/2*@pi/180)*A9
 leftstring A5 = "E"
 let A5 = 20
-leftstring B5 = "cl"
-let B5 = (@atan((A1-A5)/A9)-@atan((A3-A7)/A9))/2/@pi*180
+leftstring B5 = "ftoe"
+let B5 = B1+B2
 leftstring A6 = "F"
-let A6 = 65
-leftstring B6 = "ftoe"
-let B6 = B1+B2
-let C6 = C1+C2
+let A6 = 24
+leftstring B6 = "rtoe"
+let B6 = B3+B4
+leftstring C6 = "setF"
+let C6 = A5+@tan(A12/2*@pi/180)*A9
 leftstring A7 = "G"
 let A7 = 20
-leftstring B7 = "rtoe"
-let B7 = B3+B4
-let C7 = C3+C4
+leftstring B7 = "thrust"
+let B7 = (B3-B4)/2
 leftstring A8 = "H"
-let A8 = 35
-leftstring B8 = "thrust"
-let B8 = (B3-B4)/2-B5
-let C8 = (C3-C4)/2
+let A8 = 24
+leftstring C8 = "setH"
+let C8 = A7+@tan(A12/2*@pi/180)*A9
 leftstring A9 = "W"
 let A9 = 2700
 leftstring A11 = "ftoe"
 let A11 = 0
-leftstring B11 = "setB"
-let B11 = A1-@tan((A11/2+B5)*@pi/180)*A9
-leftstring C11 = "setD"
-let C11 = A3-@tan((A11/2-B5)*@pi/180)*A9
+let B11 = -(@atan(2/(205*0.55*2+16*25.4))/@pi*180)
+let C11 = -B11
 leftstring A12 = "rtoe"
-let A12 = 0.18
-leftstring B12 = "setF"
-let B12 = A5+@tan((A12/2+B5)*@pi/180)*A9
-leftstring C12 = "setH"
-let C12 = A7+@tan((A12/2-B5)*@pi/180)*A9
-goto C12
+let A12 = @atan(2/(205*0.55*2+16*25.4))/@pi*180
+let B12 = @atan(1/(205*0.55*2+16*25.4))/@pi*180
+let C12 = @atan(4/(205*0.55*2+16*25.4))/@pi*180
+goto A14
