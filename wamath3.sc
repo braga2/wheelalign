@@ -10,8 +10,8 @@ nb_frozen_cols 0
 nb_frozen_screenrows 0
 nb_frozen_screencols 0
 format A 10 3 0
-format B 12 3 0
-format C 13 3 0
+format B 13 3 0
+format C 12 2 0
 label A0 = "mm"
 label B0 = "deg"
 label C0 = "mm"
@@ -39,12 +39,14 @@ leftstring A7 = "E"
 let A7 = 80
 leftstring B7 = "ef"
 let B7 = @atan((A8-A7)/A15)/@pi*180
+leftstring C7 = "d_efgh"
+let C7 = @tan((A17+B8)*@pi/180/2)*A15
 leftstring A8 = "F"
 let A8 = 82
 leftstring B8 = "faxdif"
 let B8 = B7+B9-B2
 leftstring C8 = "setF"
-let C8 = @tan((A17+B8)*@pi/180)*A15/2+A7
+let C8 = C7+A7
 leftstring A9 = "G"
 let A9 = 80
 leftstring B9 = "gh"
@@ -54,11 +56,13 @@ let A10 = 84
 leftstring B10 = "fturn"
 let B10 = (B7-B9)/2
 leftstring C10 = "setH"
-let C10 = @tan((A17+B8)*@pi/180)*A15/2+A9
+let C10 = C7+A9
 leftstring A11 = "I"
 let A11 = 80
 leftstring B11 = "ij"
 let B11 = @atan((A11-A12)/A15)/@pi*180
+leftstring C11 = "d_ijkl"
+let C11 = @tan((A17+B8)*@pi/180/2)*A15
 leftstring A12 = "J"
 let A12 = 75
 leftstring C12 = "setJ"
@@ -101,4 +105,4 @@ leftstring A33 = "|  | |-F-| |       | |-H-|_|___"
 leftstring A34 = "|  |--I--| |       | |--K--|"
 leftstring A35 = "|  |     |_|       |_|     |"
 leftstring A36 = "---|-----------C-----------|"
-goto C0
+goto C12
