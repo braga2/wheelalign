@@ -53,7 +53,7 @@ leftstring B9 = "gh"
 let B9 = @rtd(@atan((A10-A9)/A15))
 leftstring A10 = "H"
 let A10 = 84
-leftstring B10 = "fturn"
+leftstring B10 = "steer"
 let B10 = (B7-B9)/2
 leftstring C10 = "setH"
 let C10 = A9+C7
@@ -109,4 +109,7 @@ leftstring A33 = "|  | |-F-| |       | |-H-|_|___"
 leftstring A34 = "|  |--I--| |       | |--K--|"
 leftstring A35 = "|  |     |_|       |_|     |"
 leftstring A36 = "---|-----------C-----------|"
-goto C16
+leftstring A37 = "d_fax,d_rax - angular difference between front and rear axle lengths"
+let A37 = 0
+leftstring A38 = "In real scenario they should be equal"
+goto B37
