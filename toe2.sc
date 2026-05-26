@@ -11,21 +11,24 @@ nb_frozen_screenrows 0
 nb_frozen_screencols 0
 format A 10 3 0
 format B 12 3 0
-format C 12 2 0
+format C 12 3 0
 label A0 = "mm"
 label B0 = "deg"
 label C0 = "mm"
 leftstring A1 = "A"
 let A1 = 50
+leftstring B1 = "ftoe"
+let B1 = @rtd(@atan((A7-A6-A3+A2)/A9))
 leftstring A2 = "B"
 let A2 = 150
-leftstring B2 = "ftoe"
-let B2 = @rtd(@atan((A2-A1)/A2))
+leftstring B2 = "rtoe"
+let B2 = @rtd(@atan((A8-A5-A4+A1)/A9))
 leftstring C2 = "setB"
 let C2 = A1+@tan(@dtr(A16))*A2
 leftstring A3 = "C"
 let A3 = 1642
 leftstring A4 = "D"
+let A4 = 1550
 leftstring B4 = "rtoe"
 let B4 = @rtd(@atan((A3-A4)/A4))
 leftstring C4 = "setD"
@@ -43,7 +46,7 @@ let B6 = B5+B7-B2
 leftstring C6 = "setF"
 let C6 = A5+C5
 leftstring A7 = "G"
-let A7 = 80
+let A7 = 1667
 leftstring B7 = "gh"
 let B7 = @rtd(@atan((A8-A7)/A14))
 leftstring A8 = "H"
@@ -89,20 +92,20 @@ leftstring A17 = "rtoe"
 let A17 = @rtd(@atan(2/(205*0.55*2+16*25.4)))
 let B17 = @rtd(@atan(1/(205*0.55*2+16*25.4)))
 let C17 = @rtd(@atan(4/(205*0.55*2+16*25.4)))
-leftstring A19 = "---A-B------------------C-D-"
-leftstring A20 = "|  | |     _      _     | |"
-leftstring A21 = "|  | |    | |    | |    | |"
-leftstring A22 = "|  | |--I-| |    | |-J--| |---"
-leftstring A23 = "|  | |    |_|    |_|    | |  |"
-leftstring A24 = "|  | |                  | |  |"
-leftstring A25 = "U  | |                  | |  |"
-leftstring A26 = "|  | |                  | |  W"
-leftstring A27 = "|  | |                  | |  |"
-leftstring A28 = "|  | |    _        _    | |  |"
-leftstring A29 = "|  | |   | |      | |   | |  |"
-leftstring A30 = "|  |-+-K-| |      | |-L-+-|---"
-leftstring A31 = "|  | |   |_|      |_|   | |"
-leftstring A32 = "---E-F------------------G-H-"
-leftstring A33 = "d_fax,d_rax - angular difference between front and rear axle lengths"
-leftstring A34 = "In real scenario they should be equal"
-goto A26
+leftstring A19 = "---A-B-----------------C-D-"
+leftstring A20 = "|  | |     _     _     | |"
+leftstring A21 = "|  |_|__M_| |   | |_N__|_|"
+leftstring A22 = "|  | |--I-| |   | |-J--| |---"
+leftstring A23 = "|  | |    |_|   |_|    | |  |"
+leftstring A24 = "|  | |                 | |  |"
+leftstring A25 = "U  | |                 | |  |"
+leftstring A26 = "|  | |                 | |  W"
+leftstring A27 = "|  | |                 | |  |"
+leftstring A28 = "|  | |    _       _    | |  |"
+leftstring A29 = "|  | |   | |     | |   | |  |"
+leftstring A30 = "|  |-+-K-| |     | |-L-+-|---"
+leftstring A31 = "|  | |   |_|     |_|   | |"
+leftstring A32 = "---E-F-----------------G-H-"
+leftstring A34 = "d_fax,d_rax - angular difference between front and rear axle lengths"
+leftstring A35 = "In real scenario they should be equal"
+goto A22
