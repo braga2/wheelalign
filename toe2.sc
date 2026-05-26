@@ -12,33 +12,43 @@ nb_frozen_screencols 0
 format A 10 3 0
 format B 13 3 0
 format C 13 3 0
+format D 13 3 0
 label A0 = "mm"
 label B0 = "deg"
 label C0 = "mm"
+label D0 = "check"
 leftstring A1 = "A"
 let A1 = 50
 leftstring B1 = "ftoe"
 let B1 = @rtd(@atan((A7-A6-A3+A2)/A9))
 leftstring C1 = "setK"
 let C1 = A13-@tan(@dtr(A18/2-B7))*A15
+leftstring D1 = "ftoe"
+let D1 = @rtd(@atan((C8-C7-C10+C9)/A9))
 leftstring A2 = "B"
 let A2 = 150
 leftstring B2 = "rtoe"
 let B2 = @rtd(@atan((A8-A5-A4+A1)/A9))
 leftstring C2 = "setL"
 let C2 = A14-@tan(@dtr(A18/2-B8))*A15
+leftstring D2 = "rtoe"
+let D2 = @rtd(@atan((C6-C5-C4+C3)/A9))
 leftstring A3 = "C"
 let A3 = 1642
 leftstring B3 = "thrust"
 let B3 = @rtd(@atan((A11-A13)/A15)-@atan((A12-A14)/A15))/2
 leftstring C3 = "setA"
 let C3 = A1+@tan(@dtr(A18/2-B7))*(A15+A10)
+leftstring D3 = "thrust"
+let D3 = @rtd(@atan((A11-C1)/A15)-@atan((A12-C2)/A15))/2
 leftstring A4 = "D"
 let A4 = 1550
 leftstring B4 = "steer"
 let B4 = @rtd(@atan((A2-A1-A6+A5)/A9)-@atan((A4-A3-A8+A7)/A9))/2
 leftstring C4 = "setD"
 let C4 = A4-@tan(@dtr(A18/2-B8))*(A15+A10)
+leftstring D4 = "steer"
+let D4 = @rtd(@atan((C9-C3-C7+C5)/A9)-@atan((C4-C10-C6+C8)/A9))/2
 leftstring A5 = "E"
 let A5 = 60
 leftstring B5 = "ftoeL"
@@ -107,4 +117,4 @@ leftstring A31 = "|  | |   | |     | |   | |  |"
 leftstring A32 = "|  |-+-I-| |     | |-J-+-|---"
 leftstring A33 = "|  | |   |_|     |_|   | |"
 leftstring A34 = "---E-F-----------------G-H-"
-goto B3
+goto C9
