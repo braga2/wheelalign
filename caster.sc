@@ -10,21 +10,21 @@ nb_frozen_cols 0
 nb_frozen_screenrows 0
 nb_frozen_screencols 0
 format A 12 3 0
-format B 11 3 0
+format B 12 3 0
 format C 12 3 0
 label A0 = "mm"
-label B0 = "set,mm"
-label C0 = "deg"
+label B0 = "deg"
+label C0 = "set,mm"
 leftstring A1 = "A"
 let A1 = 100
-leftstring B1 = "B"
-let B1 = @rtd(@atan((A4-A4-A3+A2)/A4))
+leftstring B1 = "toe"
+let B1 = @rtd(@atan((A8-A5-A4+A1)/A9))
 leftstring C1 = "left"
 let C1 = @rtd(@atan(@dtr((A10-A10)/2/A13)))
 leftstring A2 = "B"
 let A2 = 150
-leftstring B2 = "G"
-let B2 = @rtd(@atan((A4-A4-A4+A1)/A4))
+leftstring B2 = "steer"
+let B2 = @rtd(@atan((A1-A2-A5+A6)/A9)-@atan((A3-A4-A7+A8)/A9))
 leftstring C2 = "right"
 let C2 = @rtd(@atan(@dtr((A10-A10)/2/A13)))
 leftstring A3 = "C"
@@ -47,6 +47,7 @@ let A6 = 150
 leftstring A7 = "G"
 let A7 = 1831
 leftstring A8 = "H"
+let A8 = 1905
 leftstring A9 = "U"
 let A9 = 5000
 leftstring A10 = "V"
@@ -75,4 +76,4 @@ leftstring A26 = "|  |  | | |     | | |  |"
 leftstring A27 = "|  |  |-| |     | |-|  |"
 leftstring A28 = "|  |  | |_|     |_| |  |"
 leftstring A29 = "---E--F-------------G--H-"
-goto A1
+goto B2
