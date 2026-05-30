@@ -1,0 +1,15 @@
+load("vect")$
+mean(x) := lsum(i,i,x)/length(x);
+
+Rx:matrix([1,0,0],[0,cos(f),-sin(f)],[0,sin(f),cos(f)]);
+Ry:matrix([cos(t),0,sin(t)],[0,1,0],[-sin(t),0,cos(t)]);
+g: [0,0,1];
+a: [ax,ay,az];
+
+v0: (g)+a;
+v1: (g.Rx)[1]+a;
+v2: (g.Rx.Rx)[1]+a;
+v3: (g.Rx.Rx.Rx)[1]+a;
+
+ma: mean([v0,v1,v2,v3]);
+subst(f=%pi, ma);

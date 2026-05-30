@@ -94,4 +94,4 @@ leftstring A27 = "|  |  | | |     | | |  |"
 leftstring A28 = "|  |  |-| |     | |-|  |"
 leftstring A29 = "|  |  | |_|     |_| |  |"
 leftstring A30 = "---E--F-------------G--H-"
-goto B8
+goto A1
