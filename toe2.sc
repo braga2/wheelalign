@@ -117,4 +117,4 @@ leftstring A31 = "|  | |   | |     | |   | |  |"
 leftstring A32 = "|  |-+-I-| |     | |-J-+-|---"
 leftstring A33 = "|  | |   |_|     |_|   | |"
 leftstring A34 = "---E-F-----------------G-H-"
-goto A3
+goto C1
